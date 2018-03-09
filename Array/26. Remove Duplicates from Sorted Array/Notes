@@ -1,0 +1,6 @@
+Basically, you need every different number be placed in order(specifically in the front part of the array)
+So you need a pointer(in this case, index i) to indicate the ordered the number. Besides, you need another pointer to compare with the ordered number(in this case, index j, and j should traverse from index 1 to the end of the array), once they are not same, i++, and move the nums[j] to where it should be.
+
+
+********
+Two pointer!

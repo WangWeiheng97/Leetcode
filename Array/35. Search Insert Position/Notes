@@ -1,0 +1,28 @@
+Method 1: Brute Force 
+Traverse the whole array until find something satisfied.
+
+Method 2: Binary Search
+Basically, the mission is to search one number in a sorted array, so you should come up with bianry search tree natrually.
+
+
+
+
+****************
+
+Basic implement of bianry search method:
+
+    public int searchInsert(int[] A, int target) {
+        int low = 0, high = A.length-1;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(A[mid] == target) return mid;
+            else if(A[mid] > target) high = mid-1;
+            else low = mid+1;
+        }
+        return low;
+    }
+
+
+    eventually, low will be the next from high.
+    
+    System.out.println((int)1.99);   Answer: 1 

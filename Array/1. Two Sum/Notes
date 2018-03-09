@@ -1,0 +1,20 @@
+Terminology: Brute Force
+Big O = N^2
+
+
+
+An efficient way!
+Map<Integer, Integer> map = new HashMap<>();
+
+HashMap methods: containsKey(key),    get(key)
+
+
+We reduce the look up time from O(n) to O(1) by trading space for speed. A hash table is built exactly for this purpose, it supports fast look up in near constant time. I say "near" because if a collision occurred, a look up could degenerate to O(n)O(n) time. But look up in hash table should be amortized O(1)O(1) time as long as the hash function was chosen carefully.
+
+
+When speaking of search something, we should come up with (Balanced)BinarySearch tree and HashTable
+
+
+
+*****
+Basically, put the numbers you want to lookup in the hashMap as the keys, so then you can use hashMap.containsKey(the number you would like to lookup)
