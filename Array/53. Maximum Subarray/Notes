@@ -1,0 +1,10 @@
+It's a opyimization problem, which can usually be solved by Dynamic Programming.
+Breaking this problem into small problems.
+This problem wants us to figure out the maxsum from front(index 0) to the end(index i-1), but we can first figure out the maxsum from front(index 0) to the end(index 1, then index 2, then index 3........).
+However, we need to konw how to conncet the each of them so that we can traverse to the end of the array.
+
+********
+    	// find every max sum in subarray which end in the index of i
+    	maxEndingHere= Math.max(maxEndingHere+A[i],A[i]); 
+    	// find the biggest maxEndingHere
+    	maxSoFar=Math.max(maxSoFar, maxEndingHere);	

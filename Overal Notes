@@ -1,0 +1,11 @@
+*1
+Optimization problem:
+An optimization problem is the problem of finding the best solution from all feasible solutions
+It can be usually solved by DP(Dynamic Programming)
+
+
+*2
+Dynamic Programming 
+Dynamic Programming is an algorithmic paradigm that solves a given complex problem by 
+****breaking it into subproblems and stores the results of subproblems****
+to avoid computing the same results again.
