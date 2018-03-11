@@ -1,0 +1,13 @@
+nums1[index1] = nums2[index2];
+index1--;
+index2--;
+
+
+
+*****
+There is a shortcut for this: nums1[index1--]=nums[index2--];
+
+
+
+*****
+This problem can be done from the end of the array. In other words, we can sort the larger numbers first. If so, when nusm2 array is sorted compeletely, we don't need to take care of nums1
