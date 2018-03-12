@@ -8,3 +8,8 @@ However, we need to konw how to conncet the each of them so that we can traverse
     	maxEndingHere= Math.max(maxEndingHere+A[i],A[i]); 
     	// find the biggest maxEndingHere
     	maxSoFar=Math.max(maxSoFar, maxEndingHere);	
+
+
+
+
+The larger problem is based on the result of smaller problem.

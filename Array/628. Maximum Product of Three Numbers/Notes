@@ -1,0 +1,3 @@
+Consider every situation first!
+Then you will know there are aactually two cases.
+Only you need to do is to sort the array and pick the max result of the two cases.(you don't nned to identify this array is corresponding to which case, you just pick the max result)

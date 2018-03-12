@@ -1,0 +1,28 @@
+A HashMap allows us to count element occurrences efficiently
+
+*****
+When "adding a duplicate key" the old value (for the same key, as keys must be unique) is simply replaced; see HashMap.put
+*****
+
+
+*******
+java.util.HashMap.entrySet()
+*******
+
+
+
+
+How to iterate a HashMap:
+        Map<Integer, Integer> counts = countNums(nums);  //method countNumre() turns an initialized a HashMap
+
+        Map.Entry<Integer, Integer> majorityEntry = null;
+        for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
+            if (majorityEntry == null || entry.getValue() > majorityEntry.getValue()) {
+                majorityEntry = entry;
+            }
+        }
+
+
+
+hashMap.entrySet()
+Map.Entry<Integer, Integer> 

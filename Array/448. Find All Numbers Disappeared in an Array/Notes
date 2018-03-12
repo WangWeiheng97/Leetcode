@@ -1,0 +1,4 @@
+This problem is trikey, because we can not use HashSet or Array.sort() (thwy will create extra space or O(NlogN)). 
+
+
+The key is: find the relation between the number and the array index.

@@ -1,0 +1,12 @@
+Detect duplicate in unsorted array:
+
+*1
+HashMap: If you want, you can even count the number of duplicate
+O(n)
+
+*2
+Sort the array and then detect.
+Arrays.sort(nums);
+O(NlogN)
+
+

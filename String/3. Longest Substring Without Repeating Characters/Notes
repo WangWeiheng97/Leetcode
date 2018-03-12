@@ -1,0 +1,6 @@
+Why do we need HashMap for this problem, since HashMap can detect duplicate!
+
+Thought:
+1. Need to traverse all element in this array, which means we must use at least one for loop
+2. We need to know the recentest duplicate element which same with the element we are doing now.
+3. We also need to know is there any other duplicate element between them.

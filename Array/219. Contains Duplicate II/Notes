@@ -1,0 +1,3 @@
+We can use HashMap or HashSet;
+In this case, HashSet can be a little bit easier.
+We can keep the length of HashSet always be less than the given k, therefore once we detect duplicate, we will be sure that the difference between them is less than k;

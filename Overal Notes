@@ -10,9 +10,102 @@ Dynamic Programming is an algorithmic paradigm that solves a given complex probl
 ****breaking it into subproblems and stores the results of subproblems****
 to avoid computing the same results again.
 
+****Overlapped Subproblems*****
+
 
 *3
 Search: 
-Unbalanced binary search tree
+Unbalanced binary search
 Balanced binary search tree: AVL, RBT, 2-3tree
 Hash table
+Sort
+
+
+
+*4
+How to iterate a HashMap:
+        Map<Integer, Integer> counts = countNums(nums);  //method countNumre() turns an initialized a HashMap
+
+        Map.Entry<Integer, Integer> majorityEntry = null;
+        for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
+            if (majorityEntry == null || entry.getValue() > majorityEntry.getValue()) {
+                majorityEntry = entry;
+            }
+        }
+
+
+
+hashMap.entrySet()
+Map.Entry<Integer, Integer> 
+
+
+
+*5
+Arrays.sort(nums);
+O(NlogN)
+
+
+
+
+
+*6
+HashSet:
+HashSet h = new HashSet(); 
+
+Important Methods in HashSet:
+
+boolean add(E e) : add the specified element if it is not present, if it is present then return false.
+void clear() : removes all the elements from set.
+boolean contains(Object o) : return true if element is present in set.
+boolean remove(Object o) : remove the element if it is present in set.
+Iterator iterator() : return an iterator over the element in the set.
+
+
+Time Complexity:
+add: O(1)
+Contains: O(1)
+Underlying Data Structure: Hash Table
+
+
+*****
+HashSet does not allow duplicate values
+*****
+
+
+
+*7
+Queue<Integer> q = new LinkedList<>();
+
+Add()-Adds an element at the tail of queue. More specifically, at the last of linkedlist if it is used, or according to the priority in case of priority queue implementation.
+
+peek()-To view the head of queue without removing it. Returns null if queue is empty.
+element()-Similar to peek(). Throws NoSuchElementException if queue is empty.
+
+remove()-Removes and returns the head of the queue. Throws NoSuchElementException when queue is impty.
+
+poll()-Removes and returns the head of the queue. Returns null if queue is empty.
+
+
+
+
+*8
+Stack<Integer> stack = new Stack<Integer>();
+
+1. Object push(Object element) : Pushes an element on the top of the stack.
+
+2. Object pop() : Removes and returns the top element of the stack. An ‘EmptyStackException’ exception is thrown if we call pop() when the invoking stack is empty.
+
+3. Object peek( ) : Returns the element on the top of the stack, but does not remove it.
+
+4. boolean empty() : It returns true if nothing is on the top of the stack. Else, returns false.
+
+5. int search(Object element) : It determines whether an object exists in the stack. If the element is found, it returns the position of the element from the top of the stack. Else, it returns -1.
+
+
+
+
+*9
+String str;
+str.length();
+str.charAt(index);
+

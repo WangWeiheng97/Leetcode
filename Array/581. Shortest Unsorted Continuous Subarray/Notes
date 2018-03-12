@@ -1,0 +1,9 @@
+This problem is related to sorted array, so you should consider sort the array first and compare the sorted array with unsorted array.
+
+
+******
+Have to consider what if the array is already sorted. If so, you can not just return end-begin, because it could be negative number.
+
+
+*****
+The key to s

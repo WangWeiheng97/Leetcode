@@ -1,0 +1,21 @@
+List<Integer> list = new List<Integer>(); // It's illegal!!
+******
+In Java, List is an interface. That is, it cannot be instantiated directly.
+
+Instead you can use ArrayList which is an implementation of that interface that uses an array as its backing store (hence the name).
+
+Since ArrayList is a kind of List, you can easily upcast it:
+
+List<T> mylist = new ArrayList<T>();
+
+
+
+
+
+******
+List<List<String>> bogus = new ArrayList<List<String>>();
+
+
+
+******
+Must create and implement insideList first, and then add the insideList into the major "List"

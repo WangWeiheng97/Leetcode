@@ -1,0 +1,3 @@
+****
+In the second for loop, the num of loop is related to the i.
+The inside for loop must from i-1 to 1, because if not, the front seted one will affect the later one.

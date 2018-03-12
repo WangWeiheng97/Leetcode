@@ -1,0 +1,3 @@
+Don't need to minus every number before, you can only minus the minimum one. 
+
+Note that the array prices[] maight be an empty array, so don't use prices[0] to initialize the minPrice.
