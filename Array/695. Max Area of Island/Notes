@@ -1,0 +1,4 @@
+Very thought-provoking problem, the key is to know how to use DFS.
+Two trikey parts we nned to learn from this problem:
+1. Since the item in the 2D array is not object, which means we can not add visited variable attached to the item(we can not add public field inside of it, like linkedNode). However, we can create another 2D array to indicate the visited status.
+2. How to figure out whetehr the current node has unvisited children. Since in this case, a node has at most 4 children, which means we can use a for loop to traverse the 4 children to find out whther they are visited or not. 

@@ -1,0 +1,4 @@
+Firstly, this problem has three situation which need to be considered seperately(k==0, k>0,k<0)
+
+Ituition:
+The basic requirement of this problem is to search one numebr or some numbers. So it's easy to use hash datastructure. Since in k==0 case, we need to track the #of duplicates, so we have to use hashMap in this problem. 

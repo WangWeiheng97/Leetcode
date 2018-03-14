@@ -1,0 +1,5 @@
+The key is still detecting the duplicate. In this case, we actually detect non duplicate. 
+
+We can devide elements in this matrix by different row-column, and store the result in the HashMap.
+
+The reason why we use HashMap here: we can use their same property as key, and then detect the difference.

@@ -1,0 +1,5 @@
+665. Non-decreasing Array
+
+When we encounter such a kind of sorted problem, it's a really good way to draw a graph to visualize and analyze the problem.
+
+Once conflicting case happens, there are actually two cases. You need take into account the nums[i-2].

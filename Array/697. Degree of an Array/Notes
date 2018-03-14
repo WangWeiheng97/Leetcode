@@ -1,0 +1,12 @@
+We can create 3 HashMap respectively, one is for right boundry element, one is for left boundry element, and the final one is for count.
+
+Then we get the degree by using Collections.max() with HashMap count.
+
+And then we compare 
+
+
+
+*****
+We can use 
+for (int x: hashMap.keySet()) 
+to traverse a HashMap

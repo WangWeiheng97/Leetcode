@@ -11,6 +11,7 @@ Dynamic Programming is an algorithmic paradigm that solves a given complex probl
 to avoid computing the same results again.
 
 ****Overlapped Subproblems*****
+Pick up a common case first. As we know, the later subproblem is based on the former one. So you assume that the former subproblem is already solved, and then you come up with a formula where you can solve current problem by using the result from former result(s)
 
 
 *3
@@ -109,3 +110,226 @@ String str;
 str.length();
 str.charAt(index);
 
+
+
+
+*10
+Integer.MIN_VALUE;
+Integer.MAX_VALUE;
+
+
+
+
+*11
+Window Sliding Technique:
+This technique shows how a nested for loop in few problems can be converted to single for loop and hence reducing the time complexity.
+EX. 643. Maximum Average Subarray I
+The brute force: time complexity is O(k*n) as it contains two nested loops.
+Window Sliding: Time Complexity is O(n).
+
+
+
+
+*12
+java.util.HashMap getOrDefault()
+public V getOrDefault(Object key,V defaultValue)
+Method Returns
+The getOrDefault() method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
+EX. hashMap.getOrDefault(key, 0)
+
+
+
+*13
+java.util.HashMap.values() Method -----------get all values
+public Collection<V> values()
+The values() method is used to return a Collection view of the values contained in this map.
+
+
+*14
+java.util.HashMap.keySet() Method------------get all keys
+public Set<K> keySet()
+The keySet() method is used to get a Set view of the keys contained in this map.
+
+Actually, we can use 
+for (int x: hashMap.keySet()) 
+To traverse the HashMap. However, if we just want to get the highest value, we can just use 
+Collections.max(hashMap.values());
+
+
+*15
+Collections.max()
+With the help of HashMap and Collections.max(), find the max number of the duplicate in an array is pretty easy. HashMap count; Collections.max(count.values)
+
+
+
+*16
+Java Collection simply means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque etc.) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet etc).
+
+java.util.Collections.sort() method 
+It is present in java.util.Collections class. It is used to sort the elements present in the specified list of Collection in ascending order.
+It works similar to java.util.Arrays.sort() method but it is better then as it can sort the elements of Array as well as linked list, queue and many more present in it.
+
+
+
+*17
+We can consider HashMap when we want to detect the difference of a group of elements which have one same property. (Ex. 766. Toeplitz Matrix). Detect the non-duplicate!
+
+
+
+
+*18
+Traversal/Iteration of an ArrayList
+Advance for loop:
+for(Integer i : arrayList){}
+
+
+
+
+*19
+    int maxDepth(Node node) 
+    {
+        if (node == null)
+            return 0;
+        else
+        {
+            /* compute the depth of each subtree */
+            int lDepth = maxDepth(node.left);
+            int rDepth = maxDepth(node.right);
+  
+            /* use the larger one */
+            if (lDepth > rDepth)
+                return (lDepth + 1);
+             else
+                return (rDepth + 1);
+        }
+    }
+
+
+
+*20
+System.exit(0)
+
+
+
+
+*21
+    @Override
+    public void loadData(String filename) throws IOException {
+
+        // Opens the given test file and stores the objects each line as a string
+        File file = new File(filename);
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        inputData = new ArrayList<>();
+        String line = br.readLine();
+        while (line != null) {
+            inputData.add(line);
+            line = br.readLine();
+        }
+        br.close();
+    }
+
+
+
+
+*22
+Set up : How to print output into a file
+
+            // Creating a File object that represents the disk file.
+            PrintStream o = new PrintStream(new File("src/results.txt"));
+
+            // Store current System.out before assigning a new value
+            PrintStream console = System.out;
+
+            // Assign o to output stream
+            System.setOut(o);
+
+
+
+*23
+How to get the used memory
+
+    // private method to get used memory 
+    private static long getMemory() {
+        Runtime runtime = Runtime.getRuntime();
+        return runtime.totalMemory() - runtime.freeMemory();
+    }
+
+
+    // specific code need to be excuted
+    startMem = getMemory();
+    Action();
+    endMem = getMemory();
+    memoryToExcuteAction = endMemory - startMemory;
+
+
+
+
+
+
+
+*24
+How to get the excuted time of a action
+
+        long startTime = System.nanoTime();
+        Action();
+        long endTime = System.nanoTime();
+        actionTime = endTime - startTime;
+
+
+
+
+
+
+*25
+""+Integer/Boolean = String
+
+
+
+
+
+
+*26
+If you don't have any idea, try to use brute force, and then find out whether there are some places to optimize the algorithm.
+
+
+
+
+
+
+*27
+HashMap and HashSet are pretty useful for detecting duplicates.
+
+
+
+
+*28
+We cans use PriorityQueue to find Second/Third/Fourth...  Maximum Number in a array.
+ex. 414. Third Maximum Number
+
+*****
+Java default PriorityQueue is MIN priority queue!!!
+However, we can actually convert it to MAX priority queue.
+PriorityQueue<Integer> maxPQ = new PriorityQueue<Integer>(20,Collections.reverseOrder());
+*****
+
+priorityQueue.contains(...); return boolean
+
+
+
+*29
+Difference between peek, poll and remove method of Queue Interface:
+poll() and remove() is used to remove the peek element or head of queue. The difference comes when queue is empty. If queue is empty and we do poll() operation then it returns null while remove() will throw the NoSuchElementException.
+
+
+
+
+
+*30
+HashSet Iteration:
+
+     // Create a HashSet
+     Set<String> hset = new HashSet<String>();
+     //     
+     for (String temp : hset) {
+     System.out.println(temp);
+     }

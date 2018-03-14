@@ -1,0 +1,3 @@
+The ituition:
+We first come up with brute force;
+We traverse every item in this array in outer for loop, and compute leftSum and rightSum(which is inefficient and can be optimize); If we have the former leftSum, we can just add nums[i-1] to get current sum. Same with leftSum, we just let former rightSum minus nums[i] to get current rightSum.

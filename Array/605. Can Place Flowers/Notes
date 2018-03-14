@@ -1,0 +1,1 @@
+The problem is actually solved by brute force. In corner cases(which in the start and end of this array), we can give meanings to the unexisted item, whcih makes the alogorithm much clear.
