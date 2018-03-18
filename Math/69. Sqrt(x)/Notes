@@ -1,0 +1,1 @@
+We can not use "mid*mid" here, because if "mid * mid" overflows the 32 bit int limit, you might end up with an infinite loop. Instead, we can use "mid==x/mid"

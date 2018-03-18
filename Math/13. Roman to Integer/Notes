@@ -1,0 +1,1 @@
+The ituitive soliution is that every time you find a specific symbol you just sum up a coresponding number. However, when encounter some compound number just like IV, IX, XL, we can not just add them one by one. So we first detect whether there are such symbols or not. 

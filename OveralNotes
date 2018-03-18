@@ -1,0 +1,50 @@
+1.
+Difference between iteration and recursion:
+Recursive functions work through the process of calling themselves until a condition is met whereas iteration uses a looping control structure (for example while, do while, for) in order to repeat a section of code until a certain condition is met. 
+
+2.
+size() works with collection, length works with arrays in java
+Ex. str.length()          arrayList.size()
+
+
+
+3. 
+The the oprand is a binary number:
+Find the carryOut: carry = sum/2;
+Find the actual number in a specific index: sum%2;
+
+
+
+4. 
+Binary Search:
+
+        int low=0; 
+        int high=nums.length-1;
+        
+        while (low<=high){
+            
+            int mid = (low+high)/2;
+            if(nums[mid]==target){
+                return mid;
+            }else if (nums[mid]>target){
+                high = mid -1;
+            }else {low=mid+1;}
+            
+        }
+        
+        return low;
+
+
+
+5. 
+Floyd’s Cycle-Finding Algorithm:
+This is the fastest method. Traverse linked list using two pointers.  Move one pointer by one and other pointer by two.  If these pointers meet at some node then there is a loop.  If pointers do not meet then linked list doesn’t have loop.
+
+We can also use this method to end a cycle. Ex. 202. Happy Number
+
+
+
+6. 
+    do {
+        .........
+    } while(slow != fast);

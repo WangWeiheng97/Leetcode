@@ -1,0 +1,76 @@
+1.
+Quick way to convert char to int:
+string.charAt(i) - '0'
+
+2.
+String s; 
+s.indexOf("IV")!=-1; 
+
+
+3.
+String to Array
+toCharArray()
+char c[]=s.toCharArray();
+
+
+
+4. 
+Computation from string usually can be simplified by using a "carry".
+
+
+
+5. 
+String vs StringBuilder vs StringBuffer
+String is immutable
+StringBuffer is similar to StringBuilder except one difference that StringBuffer is thread safe, i.e., multiple threads can use it without any issue. The thread safety brings a penalty of performance.
+
+If a string is going to remain constant throughout the program, then use String class object because a String object is immutable.
+If a string can change (example: lots of logic and operations in the construction of the string) and will only be accessed from a single thread, using a StringBuilder is good enough.
+If a string can change, and will be accessed from multiple threads, use a StringBuffer because StringBuffer is synchronous so you have thread-safety.
+
+You can use any String method on a StringBuilder object by first converting the string builder to a string with the toString() method of the StringBuilder class. 
+
+
+6. 
+public StringBuilder reverse()
+The java.lang.StringBuilder.reverse() method causes this character sequence to be replaced by the reverse of the sequence.
+
+stringBuilder.append(k) 
+K can be int, double, char, char[], boolean
+
+
+
+7. 
+String.valueOf(....).  convert something to String
+char c[]=s.toCharArray();    String to Char Array
+string.charAt(i) - '0'.     Quick way to convert char to int:
+
+
+
+8.
+Add String---------example: 415. Add Strings
+Hints:
+str.toCharArray() *********** convert char to int: char-'0'
+int carry
+StringBuilder
+sb.append()
+sb.reverse()
+
+        while(index1>=0 || index2>=0){
+            int sum = carry;
+            if(index1>=0)sum+=(numone[index1--]-'0');
+            if(index2>=0)sum+=(numtwo[index2--]-'0'); 
+            sb.append(sum%10);
+            carry = sum/10;
+        }
+        *****if(carry>0)sb.append(carry);*****
+
+
+
+
+
+
+
+
+
+

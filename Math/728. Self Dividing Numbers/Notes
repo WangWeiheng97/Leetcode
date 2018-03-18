@@ -1,0 +1,7 @@
+It's really neccessary to set another method to get boolean result for this problem.
+
+
+
+******
+digit=='0'
+but not digit == 0;

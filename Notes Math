@@ -1,0 +1,43 @@
+*1
+Reverse an integer:
+
+        while(x!=0){
+            int tail = x%10;
+            int newResult = result*10 + tail;
+            // if ((newResult - tail) != 10*result)
+            // { return 0; }
+            result =  newResult;
+            x = x/10;
+        }
+
+
+
+*2
+If we need to get specific digit in a integer, it's really convenient to convert it to String and then convert the String to charArray. In this way, we ca access to the digit we want.
+
+String.valueOf(int number).  convert something to String
+char c[]=s.toCharArray();    String to Char Array
+string.charAt(i) - '0'.     Quick way to convert char to int:
+
+
+
+
+*3
+Find max or min value in an array of primitives using Java:
+
+To get the minimum or maximum value from the array we can use the Collections.min() and Collections.max() methods.
+But as this method requires a list type of data we need to convert the array to list first using above explained “aslist()” function.
+Example:
+int max = Collections.max(Arrays.asList(num));
+
+
+
+
+*4
+If we want to do something with the the digit of a number, we need to convert the int to String then to char[], then we can continue use it.
+
+
+
+
+*5
+i*i = Math.pow(i, 2);

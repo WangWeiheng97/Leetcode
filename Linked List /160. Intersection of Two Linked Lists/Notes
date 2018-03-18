@@ -1,0 +1,5 @@
+Kind of similar to the 	
+"141	Linked List Cycle  "
+In this case, we don't have circle, but we can create a circle. When one pointer reaches to the end of the its list, it can get started in the beginning of the other list. So if there is a intersection, they will meet exactly in that intersection node.(If there is a intersection!!!!! In other words, there may not be a intersection, so the two pointers will never meet)
+
+We can sue hashTable if we don't care about the space complexity.

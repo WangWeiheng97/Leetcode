@@ -1,0 +1,6 @@
+This problem can be solved by recursion;
+
+Bace case + common case (AND DONT forget to return in every case)
+
+However, the recursion has a disadvantage such that:
+this would be a terrible solution from a practical point of view, as the stack size would be equal to the length of the merged list, which would result in a stack overflow for relatively small lengths of lists.

@@ -1,0 +1,18 @@
+This is similar to ‘how to calculate binary or decimal or any given number scale’.
+
+How to calculate the ACII difference between two alphabet:
+s.charAt(i) - 'A' + 1
+
+
+Related to 168:
+168: calculate from end to start 
+171: calculate from start to end
+
+
+For example:
+ABC = ((0*26+A)*26+B)*26+c
+
+
+*****
+res = 26*res + "the number"
+*****

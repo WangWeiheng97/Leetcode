@@ -1,0 +1,5 @@
+Note that: n--
+
+
+If we use (n % 26)-1
+It could be a negative number

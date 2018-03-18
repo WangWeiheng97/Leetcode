@@ -1,0 +1,31 @@
+*1
+Recursion is pretty useful in linkedList, but it takes lots of memory. Actually, sometimes we can just use straight way to solve some problems 
+*****
+Recursion is really perfect for LinkedList!!!!!! It can save lots of time to think. But it also has a disadvantage: it takes more computer memory.
+*****
+When we implement a recursion, firstly, we need to figure out what ALL the base cases(corner cases) are, which is relatively easier. Then, we assume we already get a well implemented method, we can use the method to implement in common case(recursive case).
+*****
+
+
+*2
+We usually need set a current node to track through and modify the list.
+
+
+*3
+A common technique in LinkedList is to set two pointer. The biggest advantage is constant space complexity.
+
+
+
+*4
+Whenever need to detect duplicate, hashMap/hashSet might be useful!
+ex. Set<ListNode> nodesSeen = new HashSet<>();
+
+
+*5
+Firstly, boundary check
+
+
+
+*6
+node = node.next;  -------- JUST remove the pointer
+node.next= otherNode ---------Change the structure
