@@ -1,0 +1,1 @@
+Note that: if the length of new String is equal or slightly greater than that of B, and if we still not be able to find the answer, we don't need to add A to the new String again, because there will never be a answer for this. So is we encounter this situation, we can just return -1.

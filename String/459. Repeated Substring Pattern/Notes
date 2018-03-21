@@ -1,0 +1,7 @@
+very good idea: to set a divisor, which would make the steps much more clear.
+
+Note that:
+public String substring(int startIndex)  
+and  
+public String substring(int startIndex, int endIndex)  ------ the substring is not including the endIndex
+

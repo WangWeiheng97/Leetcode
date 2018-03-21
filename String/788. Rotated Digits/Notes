@@ -1,0 +1,2 @@
+We don't have to convert int to char[] to get every digit in the number.
+We can get the remiander of 10 to get those digits.

@@ -48,3 +48,79 @@ We can also use this method to end a cycle. Ex. 202. Happy Number
     do {
         .........
     } while(slow != fast);
+
+
+
+7.
+Overflow in int. As int data type is 32 bit in Java, any value that surpasses 32 bits gets rolled over. In numerical terms, it means that after incrementing 1 on Integer.MAX_VALUE (2147483647=2^31-1), the returned value will be -2147483648=-2^31. 
+
+
+
+8.
+Very convenient way to count the number of duplicate 
+        for (int n: nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+
+
+
+9. 
+Have to initialize variable even though we know for sure this variable will be given a value in the next few steps. We can set the variable a impossible value and then update the value in the next few steps.
+
+
+10.
+n & 1 will do a binary comparison between n, and 1 which is 00000000000000000000000000000001 in binary. As such, it will return 00000000000000000000000000000001 when n ends in a 1 (positive odd or negative even number) and 00000000000000000000000000000000 otherwise.
+
+(n & 1) == 0 will hence be true if n is even (or negative odd) and false otherwise.
+
+
+
+11. 
+If we need to judge how many satisfied item within a range. It's better to create another method which function is judge whether one singe item is satisfied or not. Then we can call this method in the solution method to count the number of satisfied items.
+
+
+
+12.
+********Two things need to be check for sure.********
+Every statement is followed by semicolon;
+Whether the method return a value.
+
+
+
+13.
+The typo: hmap
+
+
+
+
+14.
+Stack:
+Stack<Integer> stack = new Stack<Integer>();
+Stack myStack = new Stack();// add any type of elements (String, int, etc..)
+Method Summary:
+boolean	empty()
+E	peek()
+E	pop()
+E	push(E item)
+int	search(Object o)
+
+
+
+Queue:
+Queue<String> namesQueue = new LinkedList<>(); //(using LinkedList)
+Method Summary:
+boolean	add(E e)
+E	element()
+boolean	offer(E e)
+E	peek()
+E	poll()
+E	remove()
+
+ArrayList:
+ArrayList<String> myList = new ArrayList<String>();
+Method Summary:
+boolean add(E e)
+boolean contains(Object o)
+E get(int index)
+E remove(int index)
+boolean remove(Object o)

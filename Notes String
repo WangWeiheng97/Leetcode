@@ -67,10 +67,184 @@ sb.reverse()
 
 
 
+9. 
+How to split a String by space:
+
+str = "Hello I'm your String";
+String[] splited = str.split("\\s+");
+
+\\s - matches single whitespace character
+\\s+ - matches sequence of one or more whitespace characters.
+
+
+
+10.
+public StringBuilder append(String str)
+public StringBuilder append(Char char)
+
+
+11.
+Trimming Spaces from the Beginning or End of a String:
+String result = str.trim();
+
+For left trim:
+String leftRemoved = myString.replaceAll("^\\s+", "");
+
+For right trim:
+String rightRemoved = myString.replaceAll("\\s+$", "");
+
+
+
+
+11.
+string.charAt
+
+
+12.
+The == operator checks to see if the two strings are exactly the same object. The .equals() method will check if the two strings have the same value.
+
+
+13.
+Convert int to String:
+string.valueOf()
+number+""
+
+
+14.
+String indexOf()
+
+
+
+15. 
+A easy way to detect duplicate letter in a string.
+str.indexOf("A") != str.lastIndexOf("A")
+
+A easy to detect a continuous letter in a string.
+s.contains("AAA")
+
+
+
+16.
+We can quickly convert charArray to string by using 
+new String(charArray)
+
+
+17.
+The java.lang.StringBuilder.indexOf(String str) method returns the index within this string of the first occurrence of the specified substring.
+
+
+18.
+The java.lang.StringBuilder.charAt() method returns the char value in this sequence at the specified index.
+
+
+19. 
+Before Simplify:
+        for(char character: sArray){
+            if(character=='a'||character=='e'||character=='i'||character=='o'||character=='u'||character=='A'||character=='E'||character=='I'||character=='O'||character=='U'){
+                sb.append(character);
+                indexOfVowels++;
+            }
+        }
+
+After Simplify:
+        String vowels = "aeiouAEIOU";
+
+        for(char character: sArray){
+            if(vowels.contains(character+"")){
+                sb.append(character);
+                indexOfVowels++;
+            }
+        }
+
+
+
+20.
+'A'is not equal to "A", always keep in mind to conversion if it's necessary.
+
+
+21.
+java string contains():
+
+public boolean contains(CharSequence sequence)  
+However, Strings are CharSequences, so you can just use Strings and not worry.
+
+string.contains(str); must be str, cannot be char
+
+
+
+22.
+public String substring(int startIndex)  
+and  
+public String substring(int startIndex, int endIndex)------ the substring is not including the endIndex  
+
+
+23.
+public String trim()
+This method returns a copy of the string, with leading and trailing whitespace omitted.
+
+
+24.
+        String str = new String("abc");
+        System.out.println(str.split("\\s+").length);
+
+        Result: 1
+
+
+        String str = new String("  abc");
+        System.out.println(str.split("\\s+").length);
+
+        Result: 2
+
+
+        Ex. 434. Number of Segments in a String
+
+
+25.
+StringBuilder sb;
+sb.append("a").append("b"); instead if sb.append("a"); sb.append("b");
 
 
 
 
 
+26.
+How to convert int to charArray:
+(Number+"").toCharArray();
 
 
+
+
+27. 
+Change Array in place, maybe you can set a "anchor"
+ex. 443. String Compression
+
+
+28.
+StringBuilder S = new StringBuilder(str);
+
+
+29.
+The StringBuilder class does not have a contains() method, but String does.
+So if we want to check whether the stringBuilder has a specific string, we can convert it to String and use str.contains(), or we can use sb.indexOf() directly.
+
+
+
+30.
+How to check whether a String is Valid Palindrome or not:
+
+    public boolean isPalindrome(CharSequence s) {
+        for (int i = 0; i < s.length() / 2; i++) {
+            if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+
+31. 
+Prefix: 
+Str.indexOf(prefix) == 0;
+ex. 14. Longest Common Prefix

@@ -1,0 +1,9 @@
+Just don’t understand why the type of count should be ‘long’ instead of ‘int’?
+
+Because of overflow.
+
+Let’s say we use int instead of long.
+
+int count can take 2,147,483,647 maximally.
+When you do count = 9 * 109, which is 9,000,000,000, int count overflowed.
+It will be considered as a small positive number, instead of the large positive number you intend to have.

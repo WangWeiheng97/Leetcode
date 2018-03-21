@@ -1,0 +1,4 @@
+we can use stack for this problem.
+
+Ituition:
+first in, last compare ------- pretty similar like the priciple of stack, which is first in, last out. That's the reason why we would like to use Stack for this problem,

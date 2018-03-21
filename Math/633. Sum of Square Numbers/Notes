@@ -1,0 +1,1 @@
+We frist consider the brute force. There are two for loops, which will lead to C^2 time complexity in this case. However, we can avoid the inner for loop by using Math.sqrt(). 

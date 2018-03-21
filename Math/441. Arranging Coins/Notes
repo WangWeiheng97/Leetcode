@@ -1,0 +1,9 @@
+It's just a math problem:
+The idea is about quadratic equation, the formula to get the sum of arithmetic progression is
+sum = (x + 1) * x / 2
+so for this problem, if we know the the sum, then we can know the x = (-1 + sqrt(8 * n + 1)) / 2
+
+
+*******
+we can use long to replace int to avoid int overflow.
+*******
