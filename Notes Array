@@ -25,7 +25,6 @@ Sort
 
 *4
 How to iterate a HashMap:
-        Map<Integer, Integer> counts = countNums(nums);  //method countNumre() turns an initialized a HashMap
 
         Map.Entry<Integer, Integer> majorityEntry = null;
         for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
@@ -39,6 +38,17 @@ How to iterate a HashMap:
 hashMap.entrySet()
 Map.Entry<Integer, Integer> 
 
+
+
+Map.Entry is a key and its value combined into one class. This allows you to iterate over Map.entrySet() instead of having to iterate over Map.keySet(), then getting the value for each key. A better way to write what you have is:
+
+for (Map.Entry<String, JButton> entry : listbouton.entrySet())
+{
+  String key = entry.getKey();
+  JButton value = entry.getValue();
+
+  this.add(value);
+}
 
 
 *5
@@ -158,7 +168,7 @@ Collections.max(hashMap.values());
 
 *15
 Collections.max()
-With the help of HashMap and Collections.max(), find the max number of the duplicate in an array is pretty easy. HashMap count; Collections.max(count.values)
+With the help of HashMap and Collections.max(), find the max number of the duplicate in an array is pretty easy. HashMap count; Collections.max(count.values())
 
 
 
@@ -172,7 +182,7 @@ It works similar to java.util.Arrays.sort() method but it is better then as it c
 
 
 *17
-We can consider HashMap when we want to detect the difference of a group of elements which have one same property. (Ex. 766. Toeplitz Matrix). Detect the non-duplicate!
+We can use HashMap when we want to detect the difference of groupa of elements which have one same property. (Ex. 766. Toeplitz Matrix). Detect the non-duplicate!
 
 
 
@@ -211,76 +221,7 @@ System.exit(0)
 
 
 
-
 *21
-    @Override
-    public void loadData(String filename) throws IOException {
-
-        // Opens the given test file and stores the objects each line as a string
-        File file = new File(filename);
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        inputData = new ArrayList<>();
-        String line = br.readLine();
-        while (line != null) {
-            inputData.add(line);
-            line = br.readLine();
-        }
-        br.close();
-    }
-
-
-
-
-*22
-Set up : How to print output into a file
-
-            // Creating a File object that represents the disk file.
-            PrintStream o = new PrintStream(new File("src/results.txt"));
-
-            // Store current System.out before assigning a new value
-            PrintStream console = System.out;
-
-            // Assign o to output stream
-            System.setOut(o);
-
-
-
-*23
-How to get the used memory
-
-    // private method to get used memory 
-    private static long getMemory() {
-        Runtime runtime = Runtime.getRuntime();
-        return runtime.totalMemory() - runtime.freeMemory();
-    }
-
-
-    // specific code need to be excuted
-    startMem = getMemory();
-    Action();
-    endMem = getMemory();
-    memoryToExcuteAction = endMemory - startMemory;
-
-
-
-
-
-
-
-*24
-How to get the excuted time of a action
-
-        long startTime = System.nanoTime();
-        Action();
-        long endTime = System.nanoTime();
-        actionTime = endTime - startTime;
-
-
-
-
-
-
-*25
 ""+Integer/Boolean = String
 
 
@@ -288,7 +229,7 @@ How to get the excuted time of a action
 
 
 
-*26
+*22
 If you don't have any idea, try to use brute force, and then find out whether there are some places to optimize the algorithm.
 
 
@@ -296,13 +237,13 @@ If you don't have any idea, try to use brute force, and then find out whether th
 
 
 
-*27
+*23
 HashMap and HashSet are pretty useful for detecting duplicates.
 
 
 
 
-*28
+*24
 We cans use PriorityQueue to find Second/Third/Fourth...  Maximum Number in a array.
 ex. 414. Third Maximum Number
 
@@ -316,7 +257,7 @@ priorityQueue.contains(...); return boolean
 
 
 
-*29
+*25
 Difference between peek, poll and remove method of Queue Interface:
 poll() and remove() is used to remove the peek element or head of queue. The difference comes when queue is empty. If queue is empty and we do poll() operation then it returns null while remove() will throw the NoSuchElementException.
 
@@ -324,7 +265,7 @@ poll() and remove() is used to remove the peek element or head of queue. The dif
 
 
 
-*30
+*26
 HashSet Iteration:
 
      // Create a HashSet
@@ -333,3 +274,9 @@ HashSet Iteration:
      for (String temp : hset) {
      System.out.println(temp);
      }
+
+
+
+*27
+When we dealing with subarray of an array and want to traverse the array from left to right to solve the problem, we probably can use DP to optimize the solution.
+Ex. 413. Arithmetic Slices

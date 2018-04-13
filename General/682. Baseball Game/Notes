@@ -1,0 +1,1 @@
+A stack is ideal since we only deal with operations involving the last or second-last valid round.

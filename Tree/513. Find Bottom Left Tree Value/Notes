@@ -1,0 +1,3 @@
+Ituition:
+
+First we need to get into the lowest level, which is basic function of BFS. Besides, we need the leftmost node, so we can do right-to-left.

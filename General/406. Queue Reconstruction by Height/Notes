@@ -1,0 +1,23 @@
+We first sort the people to make them stand from the highest to shortest. For people with same height, sort them according to the count of people before them from small to big.\
+
+Then add them in an arrayList: arrayList.add(int index, E element);
+So we can shift those element which has same index.
+
+
+
+
+Some take-aways:
+
+Sorting an array of Objects using a Comparator
+Arrays.sort(array, comparator)
+
+        Arrays.sort(people, new Comparator<int[]>() {
+            public int compare(int[] a, int[] b) {
+                if (b[0] == a[0]) return a[1] - b[1];
+                return b[0] - a[0];
+            }
+        });
+
+
+Check it out:
+http://www.codejava.net/java-core/collections/sorting-arrays-examples-with-comparable-and-comparator

@@ -9,7 +9,7 @@ Ex. str.length()          arrayList.size()
 
 
 3. 
-The the oprand is a binary number:
+The the operand is a binary number:
 Find the carryOut: carry = sum/2;
 Find the actual number in a specific index: sum%2;
 
@@ -39,6 +39,8 @@ Binary Search:
 5. 
 Floyd’s Cycle-Finding Algorithm:
 This is the fastest method. Traverse linked list using two pointers.  Move one pointer by one and other pointer by two.  If these pointers meet at some node then there is a loop.  If pointers do not meet then linked list doesn’t have loop.
+
+ex. 141. Linked List Cycle
 
 We can also use this method to end a cycle. Ex. 202. Happy Number
 
@@ -98,11 +100,13 @@ Stack:
 Stack<Integer> stack = new Stack<Integer>();
 Stack myStack = new Stack();// add any type of elements (String, int, etc..)
 Method Summary:
-boolean	empty()
+boolean	isEmpty()
 E	peek()
 E	pop()
 E	push(E item)
 int	search(Object o)
+int     size()
+boolean contains()
 
 
 
@@ -115,6 +119,12 @@ boolean	offer(E e)
 E	peek()
 E	poll()
 E	remove()
+boolean isEmpty()
+int     size()
+boolean contains()
+
+When element can not be added to collection the add method throws an exception and offer doesn't.
+If queue is empty and we do poll() operation then it returns null while remove() will throw the NoSuchElementException.
 
 ArrayList:
 ArrayList<String> myList = new ArrayList<String>();
@@ -124,3 +134,672 @@ boolean contains(Object o)
 E get(int index)
 E remove(int index)
 boolean remove(Object o)
+boolean isEmpty()
+int     size()
+
+
+15.
+How to get subarray:
+Java.util.Arrays.copyOfRange()
+public static int[] copyOfRange(int[] original_array, int from_index, int to_index)
+
+
+
+16.
+Recursion is very useful when dealing with LinkedList, tree......
+ex. 654. Maximum Binary Tree
+
+
+
+17.
+XOR:
+
+Let's take 5^6 as example:
+
+(decimal)    (binary)
+     5     =  101
+     6     =  110
+------------------ xor
+     3     =  011
+
+int xor = x^y;
+res+=xor&1;
+xor>>=1;
+
+18.
+Bitwise right shift operators in Java
+1) >> (Signed right shift)--------- If the number is negative, then 1 is used as a filler and if the number is positive, then 0 is used as a filler.
+2) >>> (Unsigned right shift)------It always fills 0 irrespective of the sign of the number.
+
+
+19.
+Java.lang.Integer.bitCount() Method
+Integer.bitCount(i);
+
+RESULT:
+Number = 177
+Binary = 10110001
+Number of one bits = 4
+
+
+19.
+If you want to traverse every item, use for loop; otherwise, use while loop
+
+
+20.
+ArrayList inside of ArrayList
+ArrayList<ArrayList<String>> nodes = new ArrayList<ArrayList<String>>();
+
+
+
+
+21. 
+When should we use stack:
+1. Only deal with last one or two items. Ex. 682. Baseball Game
+2. First in last out.   Ex. 20. Valid Parentheses
+
+
+
+
+22.
+java.util.HashSet.size() Method
+hashSet.size()
+
+
+
+
+23.
+Math.abs(a)
+
+
+
+
+
+24. 
+Island problems:
+Traverse every item in the 2-d array; Know how to Move up/down/left/right
+ex. 463. Island Perimeter; 695. Max Area of Island
+
+
+
+
+25.
+How to find the index of an element in an int array?
+Ex. 
+Integer[] array = {1,2,3,4,5,6}; // Only if this is an object array!!!!!
+Arrays.asList(array).indexOf(4); // If array is like int[], double[], it won't work!!!
+
+
+
+
+
+26.
+1. Sorting an array of primitives
+        int[] arr = {13, 7, 6, 45, 21, 9, 2, 100};
+ 
+        // Sort subarray from index 1 to 4, i.e.,
+        // only sort subarray {7, 6, 45, 21} and
+        // keep other elements as it is.
+        Arrays.sort(arr, 1, 5);    // O(n log n) average complexity
+
+
+
+2. Sorting an array of Objects
+
+public class Employee implements Comparable<Employee> {
+    // variables
+    // constructor
+    // getters and setters
+ 
+    @Override
+    public int compareTo(Employee employee) {
+        return this.salary - employee.salary;      // ascending order
+    }
+}
+
+
+
+ex. 378. Kth Smallest Element in a Sorted Matrix
+
+
+
+
+Employee[] employees = new Employee[4];
+ 
+employees[0] = new Employee("Tom", 45, 80000);
+employees[1] = new Employee("Sam", 56, 75000);
+employees[2] = new Employee("Alex", 30, 120000);
+employees[3] = new Employee("Peter", 25, 60000);
+ 
+ 
+Arrays.sort(employees);
+ 
+
+
+3. Sorting an array of Objects using a Comparator
+Arrays.sort(array, comparator)
+
+        Arrays.sort(people, new Comparator<int[]>() {
+            public int compare(int[] a, int[] b) {
+                if (b[0] == a[0]) return a[1] - b[1]; // ascending
+                return b[0] - a[0];    //descending
+            }
+        });
+
+
+
+
+4. Sorting an array into reverse order
+Arrays.sort(nums, Collections.reverseOrder());
+
+
+Check it out:
+http://www.codejava.net/java-core/collections/sorting-arrays-examples-with-comparable-and-comparator
+
+
+
+
+
+27.
+public void add(int index, E element)
+The java.util.ArrayList.add(int index, E elemen) method inserts the specified element E at the specified position in this list.It shifts the element currently at that position (if any) and any subsequent elements to the right (will add one to their indices).
+
+
+
+28.
+How to traverse a binary tree by level: BFS+Inner for-loop
+Ex. 637. Average of Levels in Binary Tree
+
+
+
+
+29.
+       // Creating empty priority queue
+       PriorityQueue<String> pQueue = new PriorityQueue<String>();
+
+Time complexity of Java PriorityQueue:
+O(log n) time for the enqueing and dequeing methods (offer, poll, remove() and add)
+
+O(n) for the remove(Object) and contains(Object) methods
+
+O(1) for the retrieval methods (peek, element, and size)
+
+
+
+
+30. 
+When dealing with tree problem, first check whether the root is null or not.
+
+
+
+
+31.
+Backtracking algorithm:
+ex. 526. Beautiful Arrangement
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+
+Pick a starting point.
+while(Problem is not solved)
+    For each path from the starting point.
+        check if selected path is safe, if yes select it
+        and make recursive call to rest of the problem
+        before which undo the current move.
+    End For
+If none of the move works out, return false, NO SOLUTON.
+
+
+
+
+
+32.
+        List<List<String>> res = new ArrayList<List<Stirng>>();
+
+        res.add(new Arraylist<String>(list));
+
+
+
+
+33.
+Integer.valueOf() vs. Integer.parseInt()
+
+Actually, valueOf uses parseInt internally. The difference is parseInt returns an int primitive while valueOf returns an Integer object.
+
+
+
+
+
+
+34.
+Reverse problems:
+
+*1: reverse Integer:  
+Key:int newResult = result*10 + tail;
+ex. 7. Reverse Integer
+
+*2: reverse String
+Key: StringBuilder; sb.append()
+ex. 344. Reverse String
+
+*3: reverse Linked List
+Key: recursion
+ex. 206. Reverse Linked List
+
+
+
+35.
+Palindrome Problem:
+1. Compare the original with the reversed
+2. Compare the left with right
+
+
+
+
+36.
+We can also set a condition in for loop signature: ex. 28. Implement strStr()
+
+
+
+
+37.
+How to sort the values in hashMap
+
+Bucket Sort: just like the data structure in hash table. ex. 347. Top K Frequent Elements. ------- How to sort the values in hashMap 
+
+        List<Integer>[] buckets = new ArrayList[length];  // can not be "new ArrayList<Integer>[length]",  must be generic
+
+
+
+38.
+How to get number of pairs of complements (A+B=0) from two(many) arrays: 
+We can use hashMap!!!
+ex. 454. 4Sum II
+
+
+
+39.
+How to check whether to strings contains same characters (not in order):
+key: hashMap ------ add (key, amount) from first string into the table, delete amount from second string.
+ex. 242. Valid Anagram
+
+
+
+
+
+40.
+How to create random numbers:
+
+
+        Random ran = new Random();
+        
+        for(int i=0; i<30; i++) {
+            System.out.print(ran.nextInt(3)+" ");    //random number is from 0 to 2
+        }
+
+
+       Output: 1 2 1 0 2 2 2 0 2 0 1 0 1 2 2 0 1 0 2 1 2 1 1 0 1 0 2 1 0 2 
+
+
+
+
+41. 
+ArrayList is definitely continuous!!!! No matter it's add() or remove(); If you add element in an index which it has empty space before it, this method will throw an exception, since it will cause the ArrayList break the continuous style!
+
+
+
+
+42.
+How to generate random array base on the original array:
+Key:     
+Random ran = new Random();
+int removeIdx = ran.nextInt(list.size());
+Convert the original array to ArrayList, and then get random element in this ArrayList and store the value in the array, don't forget to remove the value in the ArrayList.
+Ex. 384. Shuffle an Array
+
+
+
+
+
+43.
+PriorityQueue & comparable object
+ex. 378. Kth Smallest Element in a Sorted Matrix
+
+
+
+
+
+
+44.
+public class NestedIterator implements Iterator<Integer>{
+
+//constructor, getter, setter, fields
+
+@Override
+public boolean hasNext(){
+
+}
+
+
+
+@Override
+public Integer next(){
+
+}
+
+} 
+
+
+
+
+
+
+
+45.
+Image rotation: reverse row and then reverse diagonally
+ex. 48. Rotate Image
+
+
+
+
+
+
+46.
+Sometimes, DP can also solve problems which can be solved by backtracking, and DP can be more efficient.
+ex. 70. Climbing Stairs
+
+
+
+
+47.
+Quick sort and merge sort are Divide and Conquer algorithm
+
+
+
+48.
+Judge whether a increasing subsequence of 3 elements(4,5,6......)exists: 334. Increasing Triplet Subsequence
+
+
+
+
+49.
+        Map<String,List> hmap = new HashMap<>();  //List can be value in a HashMap, so we can group elements together by their same property.
+        Ex. 49. Group Anagrams
+
+        return new ArrayList(hmap.values()); // It's a much easier way to create List<ArrayList>();
+
+
+
+50.
+While loop inside of for loop doesn't mean the time complexity is N^2, it could be N.  Ex. 128. Longest Consecutive Sequence
+
+
+
+
+
+51.
+The Deque is related to the double-ended queue that supports addition or removal of elements from either end of the data structure, it can be used as a queue (first-in-first-out/FIFO) or as a stack (last-in-first-out/LIFO).
+
+
+
+
+52.
+Implement graph data structure:
+
+    public Set<E> vertices;
+    public Map<E, HashSet<E>> edges;
+
+
+
+
+53.
+How to traverse a matrix by row, column and cube in the same time: 
+ex. 36. Valid Sudoku
+
+We can use % and /. These two operators can be helpful for matrix traversal problems.
+
+For a block traversal, it goes the following way.
+
+0,0, 0,1, 0,2; < — 3 Horizontal Steps followed by 1 Vertical step to next level.
+
+1,0, 1,1, 1,2; < — 3 Horizontal Steps followed by 1 Vertical step to next level.
+
+2,0, 2,1, 2,2; < — 3 Horizontal Steps.
+
+And so on…
+But, the j iterates from 0 to 9.
+
+But we need to stop after 3 horizontal steps, and go down 1 step vertical.
+
+Use % for horizontal traversal. Because % increments by 1 for each j : 0%3 = 0 , 1%3 = 1, 2%3 = 2, and resets back. So this covers horizontal traversal for each block by 3 steps.
+
+Use / for vertical traversal. Because / increments by 1 after every 3 j: 0/3 = 0; 1/3 = 0; 2/3 =0; 3/3 = 1.
+
+So far, for a given block, you can traverse the whole block using just j.
+
+
+
+
+
+
+
+54.
+Bubble Sort:
+
+    void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++) // i means the excecution times
+            for (int j = 0; j < n-i-1; j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+
+
+
+
+55. 
+An object is a class instance or an array
+Hence, array is also an object!
+
+
+
+
+56.
+Default array values in Java:
+
+boolean : false
+int : 0
+double : 0.0
+String : null
+User Defined Type : null
+
+
+
+
+57.
+Given ignorer and preorder, how to get a binary tree:
+105. Construct Binary Tree from Preorder and Inorder Traversal
+
+
+
+
+58.
+Character.isLetter('A')
+Character.isLowerCase('C')
+Character.toUpperCase(ch1)
+
+
+
+
+
+59.
+StringBuilder sb;
+sb.deleteCharAt(index);
+sb.delete(start, end);
+
+
+
+
+
+60.
+2's complement: 
+
+0000 - zero
+0001 - one
+0010 - two
+0011 - three
+0100 to 0111 - four to seven
+That's as far as we can go in positives. 23-1 = 7.
+
+For negatives:
+
+1111 - negative one
+1110 - negative two
+1101 - negative three
+1100 to 1000 - negative four to negative eight
+
+
+
+61. 
+double to int: int value will be the integer part, no matter the double value is positive or negative.
+
+
+
+
+62.
+How to sort values in HashMap: bucket sort (array of List)
+List<Character>[] buckets = new ArrayList[s.length()+1]; // how to create array of List!!!
+ex. 451. Sort Characters By Frequency
+
+
+
+
+63.
+When we want to modify a primitive(even a object) variable during the recursion, we can/must define the variable outside the method, since sometimes we can not upcast the modification of the variable to the upper recursion.
+ex. 538. Convert BST to Greater Tree
+
+
+
+
+64.
+Java 8 - Streams
+https://www.tutorialspoint.com/java8/java8_streams.htm
+
+
+
+
+
+65.
+You can't do this:
+
+List<Integer> list = new ArrayList(Arrays.asList(num));
+
+The right way is:
+
+int[] num = new int[]{3,5,81,6,3,789,67,56,79,8,76,80,6,77,7};
+List<Integer> list = new ArrayList<Integer>();
+for (int index = 0; index < num.length; index++)
+{
+    list.add(num[index]);
+}
+
+
+
+
+
+66.
+        // Note that we have Integer here instead of
+        // int[] as Collections.reverseOrder doesn't
+        // work for primitive types.
+        Integer[] arr = {13, 7, 6, 45, 21, 9, 2, 100};
+ 
+        // Sorts arr[] in descending order
+        Arrays.sort(arr, Collections.reverseOrder());
+
+
+
+
+67.
+        // To fill complete array with a particular
+        // value
+        Arrays.fill(ar, 10);
+
+
+
+
+68. 
+Depth-first search: Pre-order, In-order, Post-order (How to implement iteratively)
+Breadth-first search: level order
+
+https://en.wikipedia.org/wiki/Tree_traversal#Pre-order 
+
+
+
+
+
+69.
+Sometimes we cannot modify within a advanced for-loop, and we can use iterator or entrySet(Map)to solve it (Not sure how to do it): ex. 409. Longest Palindrome.
+
+
+
+
+
+
+70.
+Sometimes we can use 2-D DP algorithm: ex. 416. Partition Equal Subset Sum
+
+
+
+
+71.
+HashMap is great way to track the "value" (here means specific value from subset case): ex. 337. House Robber III
+
+Memoization???
+In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+
+
+
+
+
+
+72.
+Be Naive First !!!!!!!!!!!!
+
+
+
+
+73.
+Time complexity for backtracking: ex. first step has 2 choices, second step has 2 choices, third step has 2 choices, the time complexity should be 2^3
+
+
+
+74.
+Recursive method with memoization , or dp
+
+
+
+
+75.
+DP problem: we can also use two dp array 
+Ex. 309. Best Time to Buy and Sell Stock with Cooldown
+
+
+
+
+76.
+215. Kth Largest/Smallest Element in an Array : 
+QuickSelect with random partition:  O(N)
+
+
+
+
+77. 
+The meaning of DP: the subsequent problem is based on the previous results. Think it progressively, from 1 to n. Then get the general formula.
+
+
+

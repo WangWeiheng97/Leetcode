@@ -106,7 +106,7 @@ The == operator checks to see if the two strings are exactly the same object. Th
 
 13.
 Convert int to String:
-string.valueOf()
+String.valueOf()
 number+""
 
 
@@ -121,6 +121,7 @@ str.indexOf("A") != str.lastIndexOf("A")
 
 A easy to detect a continuous letter in a string.
 s.contains("AAA")
+public boolean contains(CharSequence sequence) 
 
 
 
@@ -131,6 +132,8 @@ new String(charArray)
 
 17.
 The java.lang.StringBuilder.indexOf(String str) method returns the index within this string of the first occurrence of the specified substring.
+
+string.indexOf("sifhiushfui"); // the parameter should be String
 
 
 18.
@@ -166,7 +169,7 @@ After Simplify:
 java string contains():
 
 public boolean contains(CharSequence sequence)  
-However, Strings are CharSequences, so you can just use Strings and not worry.
+However, Strings are CharSequences, so you can just use Strings but not array.
 
 string.contains(str); must be str, cannot be char
 
@@ -176,6 +179,9 @@ string.contains(str); must be str, cannot be char
 public String substring(int startIndex)  
 and  
 public String substring(int startIndex, int endIndex)------ the substring is not including the endIndex  
+
+ex.
+str.substring(2,4);
 
 
 23.
@@ -248,3 +254,56 @@ How to check whether a String is Valid Palindrome or not:
 Prefix: 
 Str.indexOf(prefix) == 0;
 ex. 14. Longest Common Prefix
+
+
+32.
+Java.lang.Character.isLetterOrDigit() Method
+Java.lang.Character.toLowerCase() Method
+
+
+
+
+33.
+Split a string based on several characters:
+
+String toSplit = "a+b-c*d/e=f";
+String[] splitted = toSplit.split("[-+*/=]");
+
+a b c d e f
+
+
+33.
+This method is used to get the primitive data type of a certain String. parseXxx() is a static method and can have one argument or two.
+      double c = Double.parseDouble("5");
+      int b = Integer.parseInt("444",16);
+
+
+34.
+    int[] f = new int[10];
+    The elements in array are 0 by default.
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+
+35.
+Array to String
+Arrays.toString(array);
+
+
+
+36.
+str.toLowerCase();
+Character.toLowerCase(char);
+
+
+
+
+
+37.
+        for(Character character : str.toCharArray()){
+            if(T.contains(character+"")){
+                sb.append(character);
+            }
+        }
+
+// Never forget str.contains(CharSequence sequence). Inside of the parenthesis is String!  We can not ignore the "" 

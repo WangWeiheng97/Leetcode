@@ -1,0 +1,1 @@
+When we cannot use extra space. we have to figure out how to solve this problem by using the existing array. We can use the index(location) to help us identiy the number we already visited.

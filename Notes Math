@@ -4,8 +4,6 @@ Reverse an integer:
         while(x!=0){
             int tail = x%10;
             int newResult = result*10 + tail;
-            // if ((newResult - tail) != 10*result)
-            // { return 0; }
             result =  newResult;
             x = x/10;
         }
@@ -26,7 +24,7 @@ string.charAt(i) - '0'.     Quick way to convert char to int:
 Find max or min value in an array of primitives using Java:
 
 To get the minimum or maximum value from the array we can use the Collections.min() and Collections.max() methods.
-But as this method requires a list type of data we need to convert the array to list first using above explained “aslist()” function.
+But as this method requires a list type of data we need to convert the array to list first using above explained “asList()” function.
 Example:
 int max = Collections.max(Arrays.asList(num));
 
@@ -77,6 +75,8 @@ Before we really implement a algorithm, we need to think about this problem real
 
 
 *10
+double Math.sqrt(number);
+
 (int)Math.sqrt(num) 
 Don't forget add (int)!!!
 
@@ -112,3 +112,22 @@ ex. 633. Sum of Square Numbers
         return true;
  
     }
+
+
+//For-loop must begin at 3!!!!!!!!!!!
+
+
+
+*13
+Find a single number in an array where other numbers are all paired.
+Bit Manipulation:
+Concept
+
+If we take XOR of zero and some bit, it will return that bit
+a ^ 0 = a
+If we take XOR of two same bits, it will return 0
+a ^ a = 0
+a^b^a = 0^b = b
+So we can XOR all bits together to find the unique number.
+
+

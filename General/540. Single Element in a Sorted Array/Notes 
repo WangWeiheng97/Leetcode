@@ -1,0 +1,2 @@
+Since the requirement is O(logN), so we first come up with bianry search. 
+We assume all numbers in the left side are paired, if we find any confliction, then there must be single number in the right side.

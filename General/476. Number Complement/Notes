@@ -1,0 +1,12 @@
+Whne speaking of bit flip, we can come up with XOR. num xor 111111 = flipedNum.
+Firstly, we need get 111111111:
+        int i = 0;
+        int j = 0;
+        
+        while(i<num){
+            i+=Math.pow(2,j);
+            j++;           
+        }
+
+
+        i is 11111111......
