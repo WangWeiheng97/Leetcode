@@ -32,18 +32,20 @@ You can use any String method on a StringBuilder object by first converting the 
 
 
 6. 
+*********************************
 public StringBuilder reverse()
 The java.lang.StringBuilder.reverse() method causes this character sequence to be replaced by the reverse of the sequence.
 
 stringBuilder.append(k) 
 K can be int, double, char, char[], boolean
+*********************************
 
 
 
 7. 
 String.valueOf(....).  convert something to String
 char c[]=s.toCharArray();    String to Char Array
-string.charAt(i) - '0'.     Quick way to convert char to int:
+string.charAt(i) - '0'.     Quick way to convert digit char to int:
 
 
 
@@ -68,6 +70,7 @@ sb.reverse()
 
 
 9. 
+***********************************
 How to split a String by space:
 
 str = "Hello I'm your String";
@@ -75,6 +78,7 @@ String[] splited = str.split("\\s+");
 
 \\s - matches single whitespace character
 \\s+ - matches sequence of one or more whitespace characters.
+**********************************
 
 
 
@@ -84,6 +88,7 @@ public StringBuilder append(Char char)
 
 
 11.
+*****************************************************
 Trimming Spaces from the Beginning or End of a String:
 String result = str.trim();
 
@@ -92,7 +97,7 @@ String leftRemoved = myString.replaceAll("^\\s+", "");
 
 For right trim:
 String rightRemoved = myString.replaceAll("\\s+$", "");
-
+*****************************************************
 
 
 
@@ -116,24 +121,23 @@ String indexOf()
 
 
 15. 
+*************************************************
 A easy way to detect duplicate letter in a string.
 str.indexOf("A") != str.lastIndexOf("A")
 
 A easy to detect a continuous letter in a string.
 s.contains("AAA")
 public boolean contains(CharSequence sequence) 
+*************************************************
 
 
 
 16.
+**************************************************
 We can quickly convert charArray to string by using 
 new String(charArray)
+***************************************************
 
-
-17.
-The java.lang.StringBuilder.indexOf(String str) method returns the index within this string of the first occurrence of the specified substring.
-
-string.indexOf("sifhiushfui"); // the parameter should be String
 
 
 18.
@@ -190,6 +194,7 @@ This method returns a copy of the string, with leading and trailing whitespace o
 
 
 24.
+*******************************************************
         String str = new String("abc");
         System.out.println(str.split("\\s+").length);
 
@@ -202,7 +207,18 @@ This method returns a copy of the string, with leading and trailing whitespace o
         Result: 2
 
 
+        String str = new String(" abc ");
+        System.out.println(str.split("\\s+").length);
+        Result: 2
+
+
+        String str = new String("abc      ");
+        System.out.println(str.split("\\s+").length);
+        Result: 2
+
+
         Ex. 434. Number of Segments in a String
+*******************************************************
 
 
 25.
@@ -264,12 +280,15 @@ Java.lang.Character.toLowerCase() Method
 
 
 33.
+*******************************************
 Split a string based on several characters:
 
 String toSplit = "a+b-c*d/e=f";
 String[] splitted = toSplit.split("[-+*/=]");
 
 a b c d e f
+
+*******************************************
 
 
 33.
@@ -289,11 +308,18 @@ This method is used to get the primitive data type of a certain String. parseXxx
 Array to String
 Arrays.toString(array);
 
+        int[] a = {1,2,3,4,4,5,56};
+        System.out.println(Arrays.toString(a));
+
+
+        Console: [1, 2, 3, 4, 4, 5, 56]
 
 
 36.
+**************************
 str.toLowerCase();
 Character.toLowerCase(char);
+**************************
 
 
 

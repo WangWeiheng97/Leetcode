@@ -1,0 +1,6 @@
+itrator????
+tree traversal: https://en.wikipedia.org/wiki/Tree_traversal#Pre-order  ????
+Sometimes we cannot modify within a advanced for-loop, and we can use iterator or entrySet(Map)to solve it (Not sure how to do it): ex. 409. Longest Palindrome.
+MergeSort (sort + merge) + QuickSort(sort + partition)
+Topological sorting
+Map.entry

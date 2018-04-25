@@ -182,7 +182,7 @@ It works similar to java.util.Arrays.sort() method but it is better then as it c
 
 
 *17
-We can use HashMap when we want to detect the difference of groupa of elements which have one same property. (Ex. 766. Toeplitz Matrix). Detect the non-duplicate!
+We can use HashMap when we want to detect the difference of groupe of elements which have one same property. (Ex. 766. Toeplitz Matrix). Detect the non-duplicate!
 
 
 
@@ -246,6 +246,8 @@ HashMap and HashSet are pretty useful for detecting duplicates.
 *24
 We cans use PriorityQueue to find Second/Third/Fourth...  Maximum Number in a array.
 ex. 414. Third Maximum Number
+Not the most efficient method!
+
 
 *****
 Java default PriorityQueue is MIN priority queue!!!
